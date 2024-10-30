@@ -7,10 +7,10 @@ const xmlFile = readFileSync(`${process.cwd()}/xml/izvoz.xml`, 'utf8');
 const options = {
     ignoreAttributes: false,
     attributeNamePrefix : "@_",
-    attributesGroupName : "@_"
+    // attributesGroupName : "@_"
 };
 const parser = new XMLParser(options);
 const json = parser.parse(xmlFile);
 
 
-console.log(json);
+console.log(json.podjetje["@_id"]);
